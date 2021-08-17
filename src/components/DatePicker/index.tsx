@@ -29,10 +29,9 @@ const iconClass = mergeStyles({
   right: 4,
   padding: '7px 5px 5px',
 })
-
 const iconProps = { iconName: 'TimePicker', className: iconClass }
 
-function copyToClickBoard(text: string) {
+const copyToClickBoard = (text: string) => {
   if (!navigator.clipboard) {
     const el = document.createElement('textarea')
     el.value = text
@@ -43,14 +42,11 @@ function copyToClickBoard(text: string) {
   } else {
     navigator.clipboard
       .writeText(text)
-      .then(() => {
-        return true
-      })
+      .then(() => console.log('ok'))
       .catch((err) => {
-        return false
+        console.error(err)
       })
   }
-  return true
 }
 
 export const DatePicker: React.FunctionComponent = () => {
@@ -94,6 +90,7 @@ export const DatePicker: React.FunctionComponent = () => {
         formatDate={(date) => (date ? format(date, 'MMMM do, yyyy') : '')}
       />
       <MaskedTextField
+        maskChar=""
         mask="99\:99"
         title="time"
         iconProps={iconProps}
@@ -111,7 +108,7 @@ export const DatePicker: React.FunctionComponent = () => {
       {timeStamp && timeStamp !== 'NaN' && !error && (
         <>
           <div>
-            <b>reddit timestamp:</b> {`<t:${timeStamp}:F>`}
+            <b>discord timestamp:</b> {`<t:${timeStamp}:F>`}
           </div>
           <br />
           <DefaultButton

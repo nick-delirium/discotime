@@ -30,11 +30,12 @@ code {
   perspective: 1000px;
   perspective-origin: 50% 50%;
   padding: 100px 0 0;
+  box-sizing: border-box;
 }
 
 @keyframes scroll {
   100% {
-    background-position: 0px -500px;
+    background-position: 0px -200px;
   }
 }
 
