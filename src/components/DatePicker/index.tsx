@@ -57,8 +57,11 @@ export const DatePicker: React.FunctionComponent = () => {
   const [timeStamp, setTimeStamp] = React.useState('')
 
   React.useEffect(() => {
-    if (time.length && !/_/.test(time)) {
-      const result = /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$/.test(time)
+    console.log(time)
+    if (time.length === 5) {
+      const result = /^([0-9]|0[0-9]|1[0-9]|2[0-3])?(:([0-5]|[0-5][0-9])?)?$/.test(
+        time,
+      )
 
       result ? setError('') : setError('Wrong time format')
     } else {
