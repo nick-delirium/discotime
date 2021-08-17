@@ -12,7 +12,7 @@ import { format, parse, getUnixTime } from 'date-fns'
 initializeIcons()
 
 const rootClass = mergeStyles({
-  maxWidth: 300,
+  minWidth: 310,
   selectors: { '> *': { margin: '0 auto' } },
   display: 'flex',
   justifyContent: 'center',
