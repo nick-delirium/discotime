@@ -14,11 +14,11 @@ code {
   font-family: 'Lobster', cursive;
 }
 .wrapper {
-  animation: scroll 70s linear infinite;
+  animation: scroll 999s linear infinite;
   background: url(../media/photo-1465146633011-14f8e0781093.3bc31ad9.jpeg), #111;
   background-repeat: repeat;
   color: #eee;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 360px;
   width: 100%;
   display: flex;
@@ -26,17 +26,17 @@ code {
   align-items: flex-start;
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  padding: 100px 0 0;
+  padding: 20px 0;
   box-sizing: border-box;
 }
 @keyframes scroll {
   to {
-    background-position: 0 -200px;
+    background-position: 0 -5000px;
   }
 }
 @media (prefers-reduced-motion) {
   .wrapper {
-    animation: scroll 200s linear infinite;
+    animation: scroll 999s linear infinite;
   }
 }
 @media (min-width: 670px) {
@@ -47,4 +47,20 @@ code {
 .ms-TextField-errorMessage {
   color: #fff !important;
 }
-/*# sourceMappingURL=main.10db4af6.chunk.css.map */
+.ms-DetailsHeader {
+  padding-top: 0 !important;
+  background: hsla(0, 0%, 100%, 0.1) !important;
+}
+.ms-DetailsHeader > div {
+  color: #fff !important;
+}
+.ms-DetailsHeader > div:hover {
+  color: #fff !important;
+  background: unset !important;
+}
+.ms-DetailsRow {
+  background: hsla(0, 0%, 100%, 0.1) !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.154c9a0c.chunk.css.map */
