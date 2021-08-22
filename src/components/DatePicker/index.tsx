@@ -78,8 +78,13 @@ export const DatePicker: React.FunctionComponent = () => {
     }
   }, [date, time])
 
+  const rn = new Date()
+  const currTime = format(rn, 'HH:mm')
   return (
     <div className={rootClass}>
+      <b>How to make universal timestamp:</b>
+      <br />
+      <b>1. Pick a date</b>
       <DatePickerUI
         placeholder="Select a date..."
         ariaLabel="Select a date"
@@ -92,7 +97,10 @@ export const DatePicker: React.FunctionComponent = () => {
         value={date}
         formatDate={(date) => (date ? format(date, 'MMMM do, yyyy') : '')}
       />
+      <br />
+      <b>2. Write time in 24h format</b>
       <MaskedTextField
+        placeholder={currTime}
         maskChar=""
         mask="99\:99"
         title="time"
@@ -101,15 +109,12 @@ export const DatePicker: React.FunctionComponent = () => {
         errorMessage={error}
       />
       <br />
-      <div>
-        <b>timezone:</b> {Intl.DateTimeFormat().resolvedOptions().timeZone}
-      </div>
-      <div>
-        <b>date:</b> {dateTime}
-      </div>
-      <br />
       {timeStamp && timeStamp !== 'NaN' && !error && (
         <>
+          <div>
+            <b>date:</b> {dateTime}
+          </div>
+          <br />
           <div>
             <b>discord timestamp:</b> {`<t:${timeStamp}:F>`}
           </div>

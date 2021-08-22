@@ -17,11 +17,11 @@ code {
 }
 
 .wrapper {
-  animation: scroll 70s linear infinite;
+  animation: scroll 999s linear infinite;
   background: url('./photo-1465146633011-14f8e0781093.jpeg'), #111111;
   background-repeat: repeat;
   color: #eee;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 360px;
   width: 100%;
   display: flex;
@@ -29,19 +29,19 @@ code {
   align-items: flex-start;
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  padding: 100px 0 0;
+  padding: 20px 0 20px;
   box-sizing: border-box;
 }
 
 @keyframes scroll {
   100% {
-    background-position: 0px -200px;
+    background-position: 0px -5000px;
   }
 }
 
 @media (prefers-reduced-motion) {
   .wrapper {
-    animation: scroll 200s linear infinite;
+    animation: scroll 999s linear infinite;
   }
 }
 
@@ -53,4 +53,24 @@ code {
 
 .ms-TextField-errorMessage {
   color: white !important;
+}
+
+.ms-DetailsHeader {
+  padding-top: 0 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ms-DetailsHeader > div {
+  color: white !important;
+}
+
+.ms-DetailsHeader > div:hover {
+  color: white !important;
+  background: unset !important;
+}
+
+.ms-DetailsRow {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  font-weight: bold;
 }
