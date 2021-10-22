@@ -11,16 +11,6 @@ import { format, parse, getUnixTime } from 'date-fns'
 
 initializeIcons()
 
-const rootClass = mergeStyles({
-  minWidth: 310,
-  selectors: { '> *': { margin: '0 auto' } },
-  display: 'flex',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  padding: 15,
-  borderRadius: 10,
-  background: 'rgba(255, 255, 255, 0.1)',
-})
 const iconClass = mergeStyles({
   color: 'black',
   fontSize: 16,
@@ -81,7 +71,7 @@ export const DatePicker: React.FunctionComponent = () => {
   const rn = new Date()
   const currTime = format(rn, 'HH:mm')
   return (
-    <div className={rootClass}>
+    <div className="date_picker">
       <b>How to make universal timestamp:</b>
       <br />
       <b>1. Pick a date</b>

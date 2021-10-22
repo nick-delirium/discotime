@@ -27,7 +27,7 @@ const columns: IColumn[] = [
     name: 'output',
     fieldName: 'output',
     minWidth: 100,
-    maxWidth: 150,
+    maxWidth: window.innerWidth <= 768 ? 127 : 150,
     isResizable: true,
   },
   {
@@ -35,7 +35,7 @@ const columns: IColumn[] = [
     name: 'description',
     fieldName: 'description',
     minWidth: 100,
-    maxWidth: 200,
+    maxWidth: window.innerWidth <= 768 ? 152 : 200,
     isResizable: true,
   },
 ]
@@ -87,12 +87,12 @@ const listItems: IListItem[] = [
 
 export class FormatTable extends React.Component {
   private readonly items = listItems
-  private readonly columns = columns
+  private readonly columns = columns;
 
   public render(): JSX.Element {
     return (
-      <>
-        <DetailsList
+      <>{
+        window.innerWidth <= 768 ? null : (<><DetailsList
           compact
           selectionMode={SelectionMode.none}
           items={this.items}
@@ -100,7 +100,9 @@ export class FormatTable extends React.Component {
           layoutMode={DetailsListLayoutMode.fixedColumns}
           setKey="none"
         />
-        <span>* default</span>
+          <span>* default</span></>)
+      }
+
       </>
     )
   }

@@ -22,8 +22,7 @@ code {
   background-repeat: repeat;
   color: #eee;
   min-height: 100vh;
-  min-width: 360px;
-  width: 100%;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -31,6 +30,7 @@ code {
   perspective-origin: 50% 50%;
   padding: 20px 0 20px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 @keyframes scroll {
@@ -45,11 +45,6 @@ code {
   }
 }
 
-@media (min-width: 670px) {
-  .title {
-    font-size: 5rem;
-  }
-}
 
 .ms-TextField-errorMessage {
   color: white !important;
@@ -73,4 +68,57 @@ code {
   background: rgba(255, 255, 255, 0.1) !important;
   color: white !important;
   font-weight: bold;
+}
+
+.textDescr {
+  margin: 20px 0 20px;
+  text-align: center;
+  width: 400px;
+}
+.madeby {
+  margin-bottom: 30px;
+   width: 400px;
+  text-align: center;
+}
+
+.date_picker {
+  width: 440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+.date_picker > * {
+  margin: 0 auto;
+}
+
+@media (max-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+  .textDescr {
+    margin: 20px 0 20px;
+    text-align: center;
+    width: unset;
+  }
+  .madeby {
+    margin-bottom: 30px;
+    width: unset;
+    text-align: center;
+  }
+  .date_picker {
+    width: 98vw;
+    margin: 0 auto;
+  }
+  .ms-DatePicker, .ms-TextField {
+    width: 300px;
+  }
+
+  .ms-FocusZone {
+    min-width: unset!important;
+    margin: 0 auto;
+  }
 }

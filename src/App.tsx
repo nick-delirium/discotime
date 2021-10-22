@@ -5,13 +5,13 @@ import { FormatTable } from 'components/FormatTable'
 const App: React.FC = () => {
   return (
     <div>
-      <div style={{ marginBottom: 30, width: 400, textAlign: 'center' }}>
+      <div className="madeby">
         <b>made by Delirium#0001</b>
       </div>
       <DatePicker />
-      <div style={{ margin: '20px 0 20px', textAlign: 'center', width: 400 }}>
+      {window.innerWidth <= 768 ? null : <div className="textDescr">
         <b> available timestamp styles: </b>
-      </div>
+      </div>}
       <FormatTable />
     </div>
   )
