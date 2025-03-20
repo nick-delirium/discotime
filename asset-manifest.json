@@ -1,21 +1,14 @@
 {
   "files": {
-    "main.css": "/discotime/static/css/main.1bbf4c2d.chunk.css",
-    "main.js": "/discotime/static/js/main.7571ce9d.chunk.js",
-    "main.js.map": "/discotime/static/js/main.7571ce9d.chunk.js.map",
-    "runtime-main.js": "/discotime/static/js/runtime-main.04bbc37e.js",
-    "runtime-main.js.map": "/discotime/static/js/runtime-main.04bbc37e.js.map",
-    "static/js/2.d855a661.chunk.js": "/discotime/static/js/2.d855a661.chunk.js",
-    "static/js/2.d855a661.chunk.js.map": "/discotime/static/js/2.d855a661.chunk.js.map",
+    "main.css": "/discotime/static/css/main.c3febf33.css",
+    "main.js": "/discotime/static/js/main.83a6225d.js",
+    "static/media/photo-1465146633011-14f8e0781093.jpeg": "/discotime/static/media/photo-1465146633011-14f8e0781093.3bc31ad9c24bede36dcf.jpeg",
     "index.html": "/discotime/index.html",
-    "static/css/main.1bbf4c2d.chunk.css.map": "/discotime/static/css/main.1bbf4c2d.chunk.css.map",
-    "static/js/2.d855a661.chunk.js.LICENSE.txt": "/discotime/static/js/2.d855a661.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/discotime/static/media/photo-1465146633011-14f8e0781093.3bc31ad9.jpeg"
+    "main.c3febf33.css.map": "/discotime/static/css/main.c3febf33.css.map",
+    "main.83a6225d.js.map": "/discotime/static/js/main.83a6225d.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.04bbc37e.js",
-    "static/js/2.d855a661.chunk.js",
-    "static/css/main.1bbf4c2d.chunk.css",
-    "static/js/main.7571ce9d.chunk.js"
+    "static/css/main.c3febf33.css",
+    "static/js/main.83a6225d.js"
   ]
 }
