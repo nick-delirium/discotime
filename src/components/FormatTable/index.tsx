@@ -102,7 +102,6 @@ export class FormatTable extends React.Component {
         />
           <span>* default</span></>)
       }
-
       </>
     )
   }

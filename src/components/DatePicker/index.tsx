@@ -72,8 +72,6 @@ export const DatePicker: React.FunctionComponent = () => {
   const currTime = format(rn, 'HH:mm')
   return (
     <div className="date_picker">
-      <b>How to make universal timestamp:</b>
-      <br />
       <b>1. Pick a date</b>
       <DatePickerUI
         placeholder="Select a date..."
@@ -87,7 +85,6 @@ export const DatePicker: React.FunctionComponent = () => {
         value={date}
         formatDate={(date) => (date ? format(date, 'MMMM do, yyyy') : '')}
       />
-      <br />
       <b>2. Write time in 24h format</b>
       <MaskedTextField
         placeholder={currTime}
@@ -98,17 +95,14 @@ export const DatePicker: React.FunctionComponent = () => {
         onChange={(e, value) => setTime(value ?? '')}
         errorMessage={error}
       />
-      <br />
       {timeStamp && timeStamp !== 'NaN' && !error && (
         <>
           <div>
             <b>date:</b> {dateTime}
           </div>
-          <br />
           <div>
             <b>discord timestamp:</b> {`<t:${timeStamp}:F>`}
           </div>
-          <br />
           <DefaultButton
             text="Click to copy"
             onClick={() => copyToClickBoard(`<t:${timeStamp}:F>`)}
